@@ -5,34 +5,34 @@ import Header from './Components/header';
 import SiteInfo from './Components/main';
 import Footer from './Components/footer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { register } from './Components/register';
-import { login } from './Components/login';
+import Register  from './Components/register';
+import Login  from './Components/login';
 // import './css/main.css';
 
 function App() {
   return (
     <Router>
-    <div className="body">
+    <>
       <Header/>
       <Switch>
         <Route exact path="/" render={()=>{
           return(
-            <>
+            // <div className = "body">
                   <SiteInfo/>
-                  </>
+                  // </div>
           )
         }}></Route>
 
         <Route exact path="/register">
-          <register/>
+          <Register/>
         </Route>
 
         <Route exact path = "/login">
-          <login/>
+          <Login/>
         </Route>
       </Switch>
       <Footer/>
-    </div>
+    </>
     </Router>
   );
 }

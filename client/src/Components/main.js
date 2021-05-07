@@ -1,7 +1,9 @@
   
 import React from 'react';
+import "../Css/home.css";
 const SiteInfo = () => {
     return (
+        
         <div className="container">
             <div className="main-content">
         <div className="site-info">
@@ -19,6 +21,7 @@ const SiteInfo = () => {
         </div>
         </div>
         </div>
+    
     )
 }
 export default SiteInfo;
