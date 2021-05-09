@@ -8,6 +8,7 @@ const {JWT_SECRET} = require("../keys")
 const requirelogin = require("../middleware/requirelogin")
 
 router.post("/signup", (req, res)=>{
+    // console.log(req.body);
     const {name, email, password} = req.body
     if(!name || !email || !password){
         return res.status(422).json({error: "Please make sure all fields are filled."})
@@ -33,7 +34,7 @@ router.post("/signup", (req, res)=>{
     })
 
     router.post("/signin", (req, res)=>{
-        const {email,paswword} = req.body
+        const {email,password} = req.body
         if(!email || !password){
             return res.status(422).json({error: "Please make sure all fields are filled."})
         }
