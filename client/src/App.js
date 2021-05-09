@@ -23,7 +23,7 @@ function App() {
           )
         }}></Route>
 
-        <Route exact path="/register">
+        <Route exact path="/signup">
           <Register/>
         </Route>
 
