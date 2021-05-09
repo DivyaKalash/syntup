@@ -50,14 +50,14 @@ const Register = () => {
     return (
 <div className="register">
 {/* <form> */}
-    <h1>Sign up</h1>
+    <h1>Sign up</h1><br/>
     <input className= "registerInput" type="text" name="name" placeholder="Name" value={name} onChange={(nameFunc) => setName(nameFunc.target.value)}/><br/><br/>
     {/* <input className= "registerInput" type="text" name="name" placeholder="Last Name"/><br/><br/> */}
     <input className= "registerInput" type="email" name="email" id="email" placeholder="Email address" value={email} onChange={(emailFunc) => setEmail(emailFunc.target.value)}/><br/><br/>
     <input className= "registerInput" type="password" name="password" placeholder="Password" value={password} onChange={(pwdFunc) => setPassword(pwdFunc.target.value)}/><br/><br/>
     <input className= "registerInput" type="password" name="password" id="password" placeholder="Confirm Password"/><br/><br/>
     {/* <input className= "registerInput" type="submit" value="Register" onClick={()=>postFunc()}/><br/><br/> */}
-    <button className="registerInput" type="submit" name="action" onClick={()=>postFunc()} >click</button>
+    <button className="registerInput si" type="submit" name="action" onClick={()=>postFunc()} >Register</button><br/><br/>
     Already have account?<Link className="link" to="/login" >&nbsp;Log In</Link>
 {/* </form> */}
 </div>

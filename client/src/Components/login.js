@@ -51,12 +51,12 @@ const Login = () => {
 
   return (
     <div className="login">
-            <h1>Log In</h1>
+            <h1>Log In</h1><br/>
             <input type="email" name="email" id="email" placeholder="Email Id" autoComplete="off" value={email} onChange={(emailFunc) => setEmail(emailFunc.target.value)}/><br/><br/>
             <input type="password" name="password" id="password" placeholder="Password" autoComplete="off" value={password} onChange={(pwdFunc) => setPassword(pwdFunc.target.value)}/><br/><br/><br/>
-            <button type="submit" name="action" onClick={()=>postFunc()}>Sign In</button>
+            <button className="si"type="submit " name="action" onClick={()=>postFunc()}>Sign In</button><br/><br/>
 
-            <Link className="link" to="/signup">&nbsp;Don't have account?Sign Up </Link>
+            Don't have account?<Link className="link" to="/signup">&nbsp;Sign Up </Link>
     </div>
   );
 };

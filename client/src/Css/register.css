@@ -11,6 +11,7 @@ body{
     margin: auto;
     margin-top: 52px;
     height: 447px;
+    text-align: center;
 }
 form{
     width: 240px;
@@ -53,4 +54,21 @@ h1{
     text-decoration: "none";
     font-family: 'Play', sans-serif;
     color: yellow;
+}
+.si
+{
+    border:none;
+    width: 100px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    line-height:25px ;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.si:hover{
+    color: rgb(245, 241, 241);
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
 }
