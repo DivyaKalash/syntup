@@ -17,9 +17,10 @@ mongoose.connection.on("error",(err)=>{
     console.log("error: ",err);
 })
 
-require("./models/user")
+require("./models/user");
 
-app.use(require("./route/auth"))
+app.use(require("./route/auth"));
+app.use(require("./route/admin/auth"));
 
 app.listen(PORT,()=>{
     console.log("server is running at port ",PORT);

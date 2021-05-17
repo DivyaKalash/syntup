@@ -22,3 +22,17 @@ module.exports = (req, res, next)=>{
 
     })
 }
+
+exports.userMiddleWare = (req, res, next)=>{
+    if(req.user.role =! "user"){
+        return res.status(400).json({error: "User Access Denied!..."})
+    }
+    next();
+};
+
+exports.adminMiddleWare = (req, res, next)=>{
+    if(req.user.role =! "admin"){
+        return res.status(400).json({error: "Admin Access Denied!..."})
+    }
+    next();
+};
