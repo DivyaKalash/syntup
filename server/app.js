@@ -21,6 +21,7 @@ require("./models/user");
 
 app.use(require("./route/auth"));
 app.use(require("./route/admin/auth"));
+app.use(require("./route/category"));
 
 app.listen(PORT,()=>{
     console.log("server is running at port ",PORT);
