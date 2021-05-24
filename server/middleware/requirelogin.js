@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 const User = mongoose.model("User")
 
 
-exports.requiresignin = (req, res, next)=>{
+exports.requireSignin = (req, res, next)=>{
     const {authorization} = req.headers
     if(!authorization){
         return res.status(401).json({error: "You must be logged in first."})

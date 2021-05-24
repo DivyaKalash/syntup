@@ -7,9 +7,9 @@ const mongoose = require("mongoose");
 
 exports.signup = (req, res)=>{
     const {name, email, password} = req.body
-    // if(!name || !email || !password){
-    //     return res.status(422).json({error: "Please make sure all fields are filled."})
-    // }
+    if(!name || !email || !password){
+        return res.status(422).json({error: "Please make sure all fields are filled."})
+    }
     User.findOne({email:email})
     .then((saveduser)=>{
         if(saveduser){
