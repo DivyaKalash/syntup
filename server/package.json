@@ -16,10 +16,10 @@
     "shortid": "^2.2.16",
     "slugify": "^1.5.3"
   },
-  "devDependencies": {},
-  "scripts": {
-    
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   },
+  "scripts": {"start":"nodemon ./app.js"},
   "author": "",
   "license": "ISC"
 }
