@@ -11,29 +11,29 @@ exports.addBooking = (req,res) => {
            const bookingDate = req.body.bookingItems.bookingDate;
            const item = booking.bookingItems.find(c => c.services == services && c.bookingDate === bookingDate);
           let updateItem,condition;
-          const sameItem = booking.bookingItems.find(c => c.services == services);
+        //   const sameItem = booking.bookingItems.find(c => c.services == services);
            if(item){
             
               return res.status(400).json({error: " cannot be booked on this day"});
             }
-            if(sameItem){
-             conditon = {
-                 "user": req.user._id,
-                 "bookingItems":  services
+            // if(sameItem){
+            //  condition = {
+            //      "user": req.user._id,
+            //      "bookingItems": services
             
-             };
-             updateItem = {
-                 "$set":{
-                     "bookingItems.$": {
-                         ...req.body.bookingItems,
-                         bookingDate: req.body.bookingItems.bookingDate
+            //  };
+            //  updateItem = {
+            //      "$set":{
+            //          "bookingItems.$": {
+            //              ...req.body.bookingItems,
+            //              bookingDate: req.body.bookingItems.bookingDate
                          
                      
-                 }}
-             }
-            }
+            //      }}
+            //  }
+            // }
 
-              else{
+              
                   condition = {
                       "user": req.user._id
                   };
@@ -42,14 +42,14 @@ exports.addBooking = (req,res) => {
                           "bookingItems": req.body.bookingItems
                       }
                   }
-              } 
+              
                
               Booking.findOneAndUpdate(condition,updateItem)
               .exec((error,data) => {
                   if(error) return res.status(400).json({error});
                   if(data)
                   {
-                      return res.status(201).json({data})
+                      return res.status(200).json({data})
                   }
               });
 
@@ -62,7 +62,7 @@ exports.addBooking = (req,res) => {
                 booking.save((error,booking) => {
                     if(error) return res.status(400).json({error});
                     if(booking){
-                        return res.status(201).json({booking});
+                        return res.status(200).json({booking});
                  }
                 });
             }
