@@ -3,8 +3,10 @@ const app = express()
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser")
 const PORT = 5000
-const {MONGOURI} = require("./keys")
+const {MONGOURI} = require("./keys");
+const cors = require("cors");
 
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 

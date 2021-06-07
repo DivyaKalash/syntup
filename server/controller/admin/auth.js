@@ -7,13 +7,13 @@ const mongoose = require("mongoose");
 
 exports.signup = (req, res)=>{
     const {name, email, password, role} = req.body
-    if(!name || !email || !password || !role){
-        return res.status(422).json({error: "Please make sure all fields are filled."})
+    if(!name || !email || !password){
+        return res.status(400).json({error: "Please make sure all fields are filled."})
     }
     User.findOne({email:email})
     .then((saveduser)=>{
         if(saveduser){
-            return res.status(422).json({error:"Email already exist."})
+            return res.status(400).json({error:"Email already exist."})
         }
         bcrypt.hash(password,15)
         .then(hashedPassword=>{
@@ -25,7 +25,7 @@ exports.signup = (req, res)=>{
             })
         user.save()
         .then(user=>{
-            res.json({message: "Successfully Registerd hurray!"})
+            res.status(201).json({message: "Successfully Registerd hurray!"})
         }).catch(err=>{
             console.log(err);
         })
@@ -36,22 +36,23 @@ exports.signup = (req, res)=>{
 exports.signin = (req, res)=>{
     const {email,password} = req.body
     if(!email || !password){
-        return res.status(422).json({error: "Please make sure all fields are filled."})
+        return res.status(400).json({error: "Please make sure all fields are filled."})
     }
     User.findOne({email:email})
     .then(saveduser=>{
         if(!saveduser || saveduser.role != "admin"){
-            return res.status(422).json({error: "Please provide valid credentials."})
+            return res.status(400).json({error: "Please provide valid credentials."})
         }
         bcrypt.compare(password,saveduser.password)
         .then(ismatch=>{
             if(!ismatch){
-                return res.status(422).json({error: "Please provide valid credentials." })
+                return res.status(400).json({error: "Please provide valid credentials." })
             }
             else{
-                const token = jwt.sign({_id:saveduser._id, role: saveduser.role}, JWT_SECRET ,{ expiresIn: "1h" });
-                const {_id,name,email, role} = saveduser
-                res.json({token:token, user:{_id,name,email, role}})
+                const token = jwt.sign({_id:saveduser._id, role: saveduser.role}, JWT_SECRET ,{ expiresIn: "1d" });
+                res.cookie("token", token, {expiresIn: "1d"});
+                const {_id,name,email, role} = saveduser;
+                res.status(201).json({token:token, user:{_id,name,email, role}});
                 // res.json({message: "Successfully signedin 🙂."})
 
             }
@@ -60,4 +61,11 @@ exports.signin = (req, res)=>{
             console.log(err);
         })
     })
+}
+
+exports.signout = (req, res) =>{
+    res.clearCookie("token");
+    res.status(200).json({
+        message: "Signout successfully!"
+    });
 }
