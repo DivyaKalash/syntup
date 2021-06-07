@@ -6,23 +6,32 @@ import Home from './containers/Home';
 import Signup from './containers/Signup';
 import Category from './containers/Categories';
 import Service from './containers/Services';
+import PrivateRoute from './components/HOC/PrivateRoute';
+
 
 function App() {
+
+
+
+
   return (
     
-      <Router>
+      <div>
       <Header/>
+      
       <Switch>
-        <Route exact path="/" component={Home}/>
+        <PrivateRoute exact path="/" component={Home}/>
+        <PrivateRoute path="/categories" component={Category}/>
+        <PrivateRoute path="/services" component={Service}/>
         <Route path="/signup" component={Signup}/>
         <Route path="/signin" component={Signin}/>
-        <Route path="/categories" component={Category}/>
-        <Route path="/services" component={Service}/>
 
 
         
       </Switch>
-      </Router>
+      
+      </div>
+      
     
   );
 }
