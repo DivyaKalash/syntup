@@ -4,6 +4,7 @@ import Input from "../../components/UI/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { signup } from "../../actions";
 import { Redirect } from "react-router-dom";
+import Header from '../../components/Header';
 
 
 const Signup = (props) => {
@@ -30,6 +31,8 @@ const Signup = (props) => {
     dispatch(signup(user));
   };
     return (
+      <>
+      
         <Container>
             <h1 style={{textAlign: "center", paddingTop: "30px"}}>SignUp</h1>
       
@@ -70,6 +73,7 @@ const Signup = (props) => {
       </Row>
         
     </Container>
+    </>
     );
 }
 

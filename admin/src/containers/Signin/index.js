@@ -4,6 +4,7 @@ import Input from "../../components/UI/Input";
 import { login } from "../../actions";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
+import Header from "../../components/Header";
 
 const Signin = () => {
 
@@ -27,6 +28,8 @@ if(auth.authenticate){
   return <Redirect to={"/"}/>
 }
   return (
+  
+    
     <Container style={{marginTop: "60px"}}>
       <h1 style={{ textAlign: "center", paddingTop: "30px" }}>SignIn</h1>
 
@@ -54,6 +57,7 @@ if(auth.authenticate){
         </Col>
       </Row>
     </Container>
+    
   );
 };
 

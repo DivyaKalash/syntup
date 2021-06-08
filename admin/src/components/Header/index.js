@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { signout } from '../../actions/auth';
 import "./style.css";
 
-const Header = () => {
+const Header = (props) => {
 
    const auth = useSelector(state=> state.auth);
    const dispatch = useDispatch();
@@ -46,6 +46,7 @@ const Header = () => {
    }
 
     return (
+      
         <Navbar collapseOnSelect fixed="top" expand="lg" bg="dark" variant="dark">
           <Link to="/" className="navbar-brand">Syntup Admin</Link>
     {/* <Navbar.Brand className="brand" href="/">Syntup Admin</Navbar.Brand> */}
@@ -62,6 +63,8 @@ const Header = () => {
     {auth.authenticate ? forLoggedInuser() : forNonSignedInUser()}
     </Nav>
   </Navbar>
+  
+  
     )
 }
 
