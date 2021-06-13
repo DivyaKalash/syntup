@@ -26,6 +26,8 @@ app.use(require("./route/admin/auth"));
 app.use(require("./route/category"));
 app.use(require("./route/services"));
 app.use(require("./route/booking"));
+app.use(require("./route/admin/initial"));
+
 
 app.listen(PORT,()=>{
     console.log("server is running at port ",PORT);

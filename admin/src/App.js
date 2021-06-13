@@ -7,7 +7,7 @@ import Signup from './containers/Signup';
 import Category from './containers/Categories';
 import Service from './containers/Services';
 import PrivateRoute from './components/HOC/PrivateRoute';
-import { isUserLoggedIn } from "./actions";
+import { isUserLoggedIn, getInitialData } from "./actions";
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from "react";
 
@@ -19,7 +19,9 @@ const auth = useSelector(state => state.auth);
 useEffect(() => {
   if(!auth.authenticate){
   dispatch(isUserLoggedIn());
+
 }
+  dispatch(getInitialData());
 
 
 }, []);
