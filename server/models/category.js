@@ -12,8 +12,13 @@ const categorySchema = new mongoose.Schema({
     },
     parentId: {
         type : String
+    },
+    categoryImage: {
+        type : String,
+    },
+    type: {
+        type: String,
     }
-    
 },{timestamps: true});
 
 module.exports = mongoose.model('Category', categorySchema);

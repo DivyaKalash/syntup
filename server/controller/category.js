@@ -57,3 +57,53 @@ exports.getCategory = (req, res) => {
         }
     });
 }
+
+exports.updateCategory = async (req, res) => {
+
+    const {name, parentId, _id, type} = req.body;
+    const updateCategories = []
+    if(name instanceof Array){
+        for(let i=0; i<name.length; i++){
+
+
+        const category = {
+            name: name[i],
+            type: type[i]
+        };
+        if(parentId[i] !== ""){
+            category.parentId = parentId[i];
+        }
+
+        const updateCategory = await Category.findOneAndUpdate({_id: _id[i]}, category, {new: true});
+        updateCategories.push(updateCategory);
+     }
+    return res.status(201).json({ updateCategories: updateCategories });
+    }
+    else{
+        const category = {
+            name,
+            type
+        };
+        if(parentId !==""){
+            category.parentId = parentId;
+        }
+        const updateCategory = await Category.findOneAndUpdate({_id }, category, {new: true});
+        return res.status(201).json({ updateCategory});
+
+    }
+}
+
+exports.deleteCategory = async (req, res) => {
+    const {ids} = req.body.payload;
+    const deleteCategories = []
+    for(let i=0; i<ids.length; i++) {
+        const deleteCategory = await Category.findByIdAndDelete({_id: ids});
+        deleteCategories.push(deleteCategory);
+    }
+    if(deleteCategories.length == ids.length) {
+         res.status(201).json({ message: "Delete Success"});
+    }
+    else{
+         res.status(400).json({ message:"Delete Failed"})
+    }
+}
