@@ -27,6 +27,7 @@ app.use(require("./route/category"));
 app.use(require("./route/services"));
 app.use(require("./route/booking"));
 app.use(require("./route/admin/initial"));
+app.use(require("./route/product"))
 
 
 app.listen(PORT,()=>{
