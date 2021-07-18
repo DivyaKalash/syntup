@@ -5,6 +5,7 @@ import Signin from './containers/Signin';
 import Home from './containers/Home/index';
 import Signup from './containers/Signup';
 import Category from './containers/Categories';
+import Product from './containers/Products';
 import Service from './containers/Services';
 import PrivateRoute from './components/HOC/PrivateRoute';
 import { isUserLoggedIn, getInitialData } from "./actions";
@@ -36,6 +37,7 @@ useEffect(() => {
       <Switch>
         <PrivateRoute path="/" exact component={Home}/>
         <PrivateRoute path="/categories" component={Category}/>
+        <PrivateRoute path="/products" component={Product}/>
         <PrivateRoute path="/services" component={Service}/>
         <Route path="/signup" component={Signup}/>
         <Route path="/signin" component={Signin}/>

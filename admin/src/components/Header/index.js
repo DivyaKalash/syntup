@@ -26,6 +26,9 @@ const Header = (props) => {
       {/* <NavLink to="/"></NavLink> */}
       </li>
       <li className="nav-item">
+      <NavLink to={"/products"} className="nav-link">Products</NavLink>
+      </li>
+      <li className="nav-item">
       <span className="nav-link" onClick={logout}>Signout</span>
       </li>
     </Nav>
