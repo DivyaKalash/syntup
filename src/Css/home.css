@@ -1,0 +1,122 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto",sans-serif;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  body{
+    background: url(../images/b1.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    
+  }
+  header{
+    width: 50%;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+  }
+  .pq{ color: blanchedalmond;
+    margin-top: 10px;
+  font-size: 24px;
+  margin-right: 38px;
+  font-weight: bold;
+  font-family: 'PT Serif', serif;
+  }
+  .pq:hover{
+    color:#ff8c00;
+    background-color:#ADD8E6;
+    border: 0.2px solid darkblue;
+    border-radius: 10%;
+    padding: 5px 5px 5px 5px;
+  }
+  .head{
+    list-style-type: none;
+    float: right;
+    color: blanchedalmond;
+    display: flex;
+    width: 20%;
+    margin-left: 900px;
+    font-family: 'PT Serif', serif;
+  }
+  
+  
+  .container{
+    padding: 20px;
+  }
+  .site-info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title{
+    border: 2px solid #200004;
+    padding: 10px 20px;
+    width: 300px;
+    font-size: 51px;
+    color: #0047ab;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+  }
+  .xyz{
+    font-size: 24px;
+    letter-spacing: 6px;
+    padding: 10px 20px;
+    text-transform: normalize;
+   padding: 14px 0;
+   color:	 #483C32;
+   font-family: 'PT Serif', serif;
+    
+  }
+  .abc{
+    font-size: 24px;
+    letter-spacing: 6px;
+    padding: 10px 20px;
+    text-transform: normalize;
+   padding: 14px 0;
+   color:#954535	;
+  
+   font-family: 'Merriweather', serif;
+    
+  }
+  
+  footer{
+    position: relative;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .social{
+    padding-left: 0;
+  
+  }
+  .social i{
+    font-size: 15px;
+  }
+  .copyright{
+    font-size: 16px;
+    letter-spacing: 4px;
+    padding-right: 20px;
+    padding-top: 600px;
+    color: black;
+    padding-left: 100px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  

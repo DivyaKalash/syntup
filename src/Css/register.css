@@ -1,0 +1,74 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background: url(../images/Meta.png);
+}
+.register{
+    background:rgba(44, 62, 80, 0.7);
+    border-radius: 15px;
+    padding: 40px;
+    width: 327px;
+    margin: auto;
+    margin-top: 52px;
+    height: 447px;
+    text-align: center;
+}
+form{
+    width: 240px;
+    text-align: center;
+}
+.registerInput{
+    width: 250px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    font-family:'Play',sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    padding: 5px 0;
+    transition: border 0.5s;
+    outline: none;
+    color: white;
+}
+input[type=submit]
+{
+    border:none;
+    width: 100px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    line-height:25px ;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+h1{
+    color:white;
+}
+::placeholder{
+    color: white;
+    opacity: 0.8; /* Firefox */
+}
+.link{
+    text-decoration: "none";
+    font-family: 'Play', sans-serif;
+    color: yellow;
+}
+.si
+{
+    border:none;
+    width: 100px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    line-height:25px ;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.si:hover{
+    color: rgb(245, 241, 241);
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+}
