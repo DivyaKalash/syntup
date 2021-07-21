@@ -7,6 +7,7 @@ import Footer from './Components/footer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Register  from './Components/register';
 import Login  from './Components/login';
+import MenuHeader from './Components/menu-header';
 // import './css/main.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Router>
     <>
       <Header/>
+      <MenuHeader />
       <Switch>
         <Route exact path="/" render={()=>{
           return(
