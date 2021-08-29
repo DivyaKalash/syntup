@@ -17,7 +17,9 @@ const Header = (props) => {
    const forLoggedInuser = () => {
      return(
       <Nav>
-      
+      <li className="nav-item">
+      <NavLink to={"/allBookings"} className="nav-link">Bookings</NavLink>
+      </li>
       <li className="nav-item">
       <NavLink to={"/categories"} className="nav-link">Categories</NavLink>
       </li>

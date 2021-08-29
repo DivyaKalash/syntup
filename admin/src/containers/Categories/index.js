@@ -353,8 +353,8 @@ const Category = (props) => {
 
 
     return (
-        <div>
-            <h1>categories</h1>
+        <div style={{marginTop: "75px", marginLeft: "100px"}}>
+            {/* <h1>categories</h1> */}
             <button onClick={handleShow}>Add</button>
 
             <CheckboxTree
