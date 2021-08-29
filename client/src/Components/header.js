@@ -4,28 +4,29 @@ import "../Css/navbar.css";
 const Header = () =>{
     return(
         <div>
-            {/* <nav className=""navb"ar">
+            {/* <nav classNameName=""navb"ar">
                
-                <ul className="head">
-                    <li className="pq" >
-                        <Link  className="nav" to="/">Home</Link >
+                <ul classNameName="head">
+                    <li classNameName="pq" >
+                        <Link  classNameName="nav" to="/">Home</Link >
                     </li>
-                    <li className="pq">
-                        <Link  className="nav" to="/cart">Cart</Link >
+                    <li classNameName="pq">
+                        <Link  classNameName="nav" to="/cart">Cart</Link >
                     </li>
-                    <li className="pq">
-                        <Link  className="nav" to="/signup">Register</Link >
+                    <li classNameName="pq">
+                        <Link  classNameName="nav" to="/signup">Register</Link >
                     </li>
-                    <li className="pq">
-                        <Link  className="nav" to="/login">Login</Link >
+                    <li classNameName="pq">
+                        <Link  classNameName="nav" to="/login">Login</Link >
                     </li>
                 </ul>
             </nav> */}
             <nav>
-        <Link class="navb"to="/login">Login/Signup</Link>
-        <Link class="navb" to="/cart">Cart</Link>
-        <Link class="navb"to="/about">About</Link>
-        <Link class="navb"to="/">Home</Link>
+        <Link className="navbb"to="/login">Login/Signup</Link>
+        <Link className="navbb" to="/myBookings">My Bookings</Link>
+        <Link className="navbb"to="/about">About</Link>
+        <Link className="navbb"to="/">Home</Link>
+        <Link className="navbb syntup"to="/">Syntup</Link>
     </nav>
         </div>
     )

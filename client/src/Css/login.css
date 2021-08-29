@@ -2,17 +2,17 @@ body
 {
     font-family: Tahoma, Geneva, sans-serif;
     color: #fff;
-    background: url(../images/Meta.png);
+    /* background: url(../images/Meta.png); */
 }
 .login
 {
-    background: rgba(44,62,80,0.7);
+    background: #0F044C;
     border-radius: 15px;
     padding: 40px;
     width: 317px;
     margin: auto;
     margin-top: 90px;
-    height: 384px;
+    height: 358px;
     margin-left: 180x;
     text-align: center;
     

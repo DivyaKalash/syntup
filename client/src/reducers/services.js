@@ -2,13 +2,10 @@ import { servicesConstants } from "../actions/constants"
 
 const initState = {
     services: [],
-    servicesByPrice:{
-        under5K:[],
-        under10K:[],
-        under15K:[],
-        under20K:[],
-        under30K:[]
-    }
+    specificService: "",
+    img1: "",
+    img2: ""
+    
 }
 
 export default(state = initState, action) => {
@@ -16,12 +13,20 @@ export default(state = initState, action) => {
         case servicesConstants.GET_SERVICES_BY_SLUG:
             state = {
                 ...state,
-                services: action.payload.services,
-                servicesByPrice: {
-                    ...action.payload.servicesByPrice
-                }
+                services: action.payload.services
+                
             }
 
+            break;
+        case servicesConstants.GET_SPECIFIC_SERVICE:
+            state = {
+                ...state,
+                specificService: action.payload.service,
+                img1: action.payload.service.servicePictures[0],
+                img2: action.payload.service.servicePictures[1]
+
+
+            }
             break;
     }
 

@@ -3,7 +3,7 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 const shortid = require("shortid");
-const { addService, getServicesBySlug } = require("../controller/services");
+const { addService, getServicesBySlug, getSpecificService, getAllServices } = require("../controller/services");
 const { adminMiddleWare, requireSignin } = require("../middleware/requirelogin");
 
 var storage = multer.diskStorage({
@@ -19,7 +19,9 @@ var storage = multer.diskStorage({
 
 
 router.post("/service/create",requireSignin,adminMiddleWare, upload.array("servicePictures"), addService );
-router.get("/services/:slug", getServicesBySlug)
+router.get("/services/getAllService", getAllServices);
+router.get("/services/:slug", getServicesBySlug);
+router.get("/service/category/:slug",getSpecificService);
 
 
 module.exports = router;

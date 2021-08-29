@@ -1,0 +1,148 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+} */
+.containerrr{
+    width: 100%;
+}
+.wrapper{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.text{
+    flex-basis: 45%;
+    margin-bottom: 296px;
+    margin-left: 93px;
+}
+.all-images{
+    margin-top: 20px;
+    height: 80vh;
+    display: flex;
+}
+.small-images{
+    display: flex;
+    flex-direction: column;
+    margin-top: inherit;
+    margin-right: 10px;
+}
+.small-images img{
+    height: 12vh;
+    margin-bottom: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    margin-right: 3px;
+}
+.small-images img:hover{
+    opacity: 1;
+}
+.main-images img{
+    margin-top: 20px;
+    height: 45%;
+}
+p{
+    margin-bottom: 20px;
+}
+.brand{
+    background-color: rgb(83, 113, 158);
+    width: fit-content;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+h2{
+    font-size: 35px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.review{
+    background-color: rgb(78, 117, 161);
+    display: inline-block;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.review .fa{
+    color: #fff;
+}
+.price{
+    color: rgb(29,28,28);
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 10px;
+    margin-bottom: 2px;
+}
+.price-box{
+    display: flex;
+    align-items: center;
+}
+.op{
+    margin-top: 25px;
+}
+
+input{
+    margin-top: 15px;
+    width: 30px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    text-align: center;
+}
+button{
+    width: 140px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fe980f;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+button .fa{
+    margin-right: 10px;
+}
+.buy{
+    background-color: rgb(201,97,57);
+}
+h3{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.product-box{
+    margin-left: 125px;
+}
+
+
+/* header{
+    background-color: rgb(17, 17, 104);
+    height: 58px;
+}
+nav{
+    display: flex;
+    float: right;
+}
+
+nav ul{
+    display: flex;
+    float: right;
+}
+nav ul li{
+    list-style: none;
+    padding: 0 23px;
+    margin-top: 15px;
+}
+nav ul li a{
+    font-family:sans-serif;
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;   
+} */

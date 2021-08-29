@@ -1,16 +1,16 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    background: url(../images/Meta.png);
+    color: black !important;
+    /* background: url(../images/Meta.png); */
 }
 .register{
-    background:rgba(44, 62, 80, 0.7);
+    background: #0F044C;
     border-radius: 15px;
     padding: 40px;
     width: 327px;
     margin: auto;
     margin-top: 52px;
-    height: 447px;
+    height: 475px;
     text-align: center;
 }
 form{
@@ -53,7 +53,7 @@ h1{
 .link{
     text-decoration: "none";
     font-family: 'Play', sans-serif;
-    color: yellow;
+    color: #0F044C;
 }
 .si
 {

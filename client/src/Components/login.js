@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 // import { Footer } from "./footer";
 import "../Css/login.css"
 import {Link, useHistory} from "react-router-dom";
+import synimg from "../images/SYNTUP.png";
 const Login = () => {
   const history = useHistory()
   const [email,setEmail]=useState("")
@@ -46,18 +47,22 @@ const Login = () => {
         })
     
     }
-
+ 
   
 
   return (
+    <>
     <div className="login">
             <h1>Log In</h1><br/>
-            <input type="email" name="email" id="email" placeholder="Email Id" autoComplete="off" value={email} onChange={(emailFunc) => setEmail(emailFunc.target.value)}/><br/><br/>
-            <input type="password" name="password" id="password" placeholder="Password" autoComplete="off" value={password} onChange={(pwdFunc) => setPassword(pwdFunc.target.value)}/><br/><br/><br/>
+            <input className="registerInput" type="email" name="email" id="email" placeholder="Email Id" autoComplete="off" value={email} onChange={(emailFunc) => setEmail(emailFunc.target.value)}/><br/><br/>
+            <input className="registerInput" type="password" name="password" id="password" placeholder="Password" autoComplete="off" value={password} onChange={(pwdFunc) => setPassword(pwdFunc.target.value)}/><br/><br/><br/>
             <button className="si"type="submit " name="action" onClick={()=>postFunc()}>Sign In</button><br/><br/>
 
-            Don't have account?<Link className="link" to="/signup">&nbsp;Sign Up </Link>
+            <p>Don't have account?</p><Link className="link" to="/signup">&nbsp;Sign Up </Link>
     </div>
+    <img class="img2" src={synimg} alt="not able"/>
+    <img class="img1" src={synimg}/>
+    </>
   );
 };
 

@@ -62,22 +62,22 @@ exports.getServicesBySlug = (req, res) => {
 
 
             res.status(200).json({
-                services,
-                servicesByPrice:{
-                    under5k: services.filter((service) => service.price <= 5000),
-                  under10k: services.filter(
-                    (service) => service.price > 5000 && service.price <= 10000
-                  ),
-                  under15k: services.filter(
-                    (service) => service.price > 10000 && service.price <= 15000
-                  ),
-                  under20k: services.filter(
-                    (service) => service.price > 15000 && service.price <= 20000
-                  ),
-                  under30k: services.filter(
-                    (service) => service.price > 20000 && service.price <= 30000
-                  ),
-                }
+                services
+                // servicesByPrice:{
+                //     under5k: services.filter((service) => service.price <= 5000),
+                //   under10k: services.filter(
+                //     (service) => service.price > 5000 && service.price <= 10000
+                //   ),
+                //   under15k: services.filter(
+                //     (service) => service.price > 10000 && service.price <= 15000
+                //   ),
+                //   under20k: services.filter(
+                //     (service) => service.price > 15000 && service.price <= 20000
+                //   ),
+                //   under30k: services.filter(
+                //     (service) => service.price > 20000 && service.price <= 30000
+                //   ),
+                // }
             });
            }
         })
@@ -106,4 +106,29 @@ exports.getServicesBySlug = (req, res) => {
         
 
     });
+}
+
+exports.getSpecificService = (req, res) => {
+    const {slug} = req.params;
+    // console.log(req.params);
+    Service.findOne({slug:slug})
+    // .select("_id")
+    .exec((error, service) => {
+        if(error){
+            return res.status(400).json({error});
+        }
+        if(service){
+            res.status(200).json({service});
+        }
+    });
+}
+
+exports.getAllServices = (req, res)=>{
+    Service.find({})
+    .exec((error, services)=> {
+        if(error) return res.status(400).json({error});
+        if(services){
+            return res.status(200).json({services});
+        }
+    })
 }

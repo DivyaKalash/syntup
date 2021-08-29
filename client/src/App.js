@@ -10,6 +10,7 @@ import Login  from './Components/login';
 import MenuHeader from './Components/menu-header';
 import ServiceListPage from './Components/ServiceListPage';
 import ProductDetailPage from './Components/ProductDetailPage';
+import MyBookings from './Components/myBookings';
 // import './css/main.css';
 
 function App() {
@@ -34,8 +35,9 @@ function App() {
         <Route exact path = "/login">
           <Login/>
         </Route>
-        <Route path="/:slug" component={ServiceListPage} />
-        <Route path="/:slug" component={ProductDetailPage} />
+        <Route exact path="/myBookings" component={MyBookings}/>
+        <Route exact path="/:slug" component={ServiceListPage} />
+        <Route exact path="/category/:slug" component={ProductDetailPage}/>
       </Switch>
       <Footer/>
     </>

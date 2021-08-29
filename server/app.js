@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 const PORT = 5000
 const {MONGOURI} = require("./keys");
 const cors = require("cors");
-
+app.use(express.static(__dirname + '/uploads'));
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())

@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 // import { Footer } from "./footer";
 import "../Css/register.css"
 import {Link, useHistory} from "react-router-dom";
+import synimg from "../images/SYNTUP.png";
 
 const Register = () => {
     const history = useHistory()
@@ -48,6 +49,7 @@ const Register = () => {
     
     }
     return (
+        <>
 <div className="register">
 {/* <form> */}
     <h1>Sign up</h1><br/>
@@ -58,9 +60,12 @@ const Register = () => {
     <input className= "registerInput" type="password" name="password" id="password" placeholder="Confirm Password"/><br/><br/>
     {/* <input className= "registerInput" type="submit" value="Register" onClick={()=>postFunc()}/><br/><br/> */}
     <button className="registerInput si" type="submit" name="action" onClick={()=>postFunc()} >Register</button><br/><br/>
-    Already have account?<Link className="link" to="/login" >&nbsp;Log In</Link>
+    <p>Already have account?</p><a className="link" href="/login" >&nbsp;Log In</a>
 {/* </form> */}
 </div>
+<img class="img2" src={synimg} alt="not able"/>
+    <img class="img1" src={synimg}/>
+</>
     );
 };
 export default Register;

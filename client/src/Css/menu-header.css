@@ -24,7 +24,7 @@
     font-size: 16px;
 }
 .menuHeader > ul > li > span:hover{
-    color: rgb(44, 45, 85);
+    color: rgb(156, 156, 161);
 }
 .menuHeader > ul > li > ul{
     position: absolute;
@@ -54,4 +54,9 @@
     display: block;
     font-size: 16px;
     text-decoration: none;
+}
+
+.menuText{
+    text-decoration: none;
+    color: rgb(102, 100, 100);
 }

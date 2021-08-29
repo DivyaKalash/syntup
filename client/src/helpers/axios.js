@@ -2,7 +2,8 @@
 import store from "../store";
 const axios = require("axios");
 const { api } = require("../urlConfig");
-const token = window.localStorage.getItem("token");
+const token = window.localStorage.getItem("jwt");
+console.log(token);
 
 
 const axiosInstance = axios.create({
